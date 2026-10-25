@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#dbe1ff","secondary-container":"#82f5c1","surface-canvas":"#F8FAFC","outline-variant":"#c3c6d7","surface-bright":"#faf8ff","status-reversed":"#475569","border-subtle":"#E2E8F0","inverse-surface":"#283044","surface-variant":"#dae2fd","on-error-container":"#93000a","surface-tint":"#0053db","on-tertiary":"#ffffff","on-tertiary-container":"#ffede1","on-background":"#131b2e","tertiary-container":"#a65900","surface-container-highest":"#dae2fd","on-primary-fixed-variant":"#003ea8","status-expired":"#DC2626","error-container":"#ffdad6","on-tertiary-fixed-variant":"#6e3900","outline":"#737686","on-primary-fixed":"#00174b","primary-fixed-dim":"#b4c5ff","surface-dim":"#d2d9f4","on-tertiary-fixed":"#2f1500","surface-container-high":"#e2e7ff","surface-container-low":"#f2f3ff","inverse-primary":"#b4c5ff","on-primary-container":"#eeefff","surface-container-lowest":"#ffffff","on-surface-variant":"#434655","on-secondary-fixed":"#002114","on-error":"#ffffff","surface-card":"#FFFFFF","tertiary-fixed-dim":"#ffb77d","background":"#faf8ff","status-urgent":"#EA580C","secondary":"#006c4a","status-safe":"#10B981","tertiary":"#824500","surface":"#faf8ff","status-draft":"#64748B","on-primary":"#ffffff","on-surface":"#131b2e","surface-container":"#eaedff","primary":"#004ac6","on-secondary-container":"#00714e","error":"#ba1a1a","on-secondary-fixed-variant":"#005137","status-expiring":"#F59E0B","secondary-fixed-dim":"#68dba9","on-secondary":"#ffffff","secondary-fixed":"#85f8c4","tertiary-fixed":"#ffdcc3","inverse-on-surface":"#eef0ff","primary-container":"#2563eb","crimson-danger":"#DC2626"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.25rem","gutter":"1.25rem","gutter-mobile":"0.75rem","space-xs":"0.25rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xl":"2rem","space-md":"0.75rem","margin":"1.5rem"},fontFamily:{"label-md":["Inter"],"body-sm":["Inter"],"metric-display":["Plus Jakarta Sans"],"body-md":["Inter"],"data-table":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"caption-sm":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.025em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"metric-display":["28px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"data-table":["13px",{lineHeight:"18px",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"caption-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"headline-xl-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface-canvas font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-inverse-surface z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-md flex items-center gap-space-sm bg-inverse-surface"><img alt="ShopIQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uv4wJYfNDWtaLwPP_s_0iI4Y3xOOIn96Nxg0T1ZPQsQgg7Xgg9B_DMn4U8goU4Jfq4vdtchEvE7T8e36h2U1I8lBCLkMpHoX-CBUZ8m9ZaD8LiaCXweg8VMoIN_iIlgOD3tdESHIebaVJzAJyGMRxxbjCwFrFT_U0JRkgeVHATZ540KN5gUw2_rtlfreOveB8pMnbw1-nLzUttma980irEK34zw4sSCkzHMWLMv_aFllBhfDlITAxRato"/><div class="flex flex-col min-w-0"><span class="font-headline-md text-body-md text-inverse-on-surface font-semibold truncate leading-tight">ShopIQ</span><span class="font-caption-sm text-caption-sm text-outline-variant truncate">Daily Grocery &amp; Retail</span></div></div><div class="px-space-md pb-space-sm"><div class="w-full flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-on-background/40 text-inverse-on-surface cursor-pointer hover:bg-on-background/60 transition-colors"><div class="flex items-center gap-space-xs min-w-0"><span class="material-symbols-outlined text-body-md text-secondary-fixed">store</span><div class="truncate"><p class="font-label-md text-caption-sm font-semibold truncate">Main Store (Branch #1)</p><p class="font-caption-sm text-[10px] text-outline-variant truncate">MG Road, Bangalore</p></div></div><span class="material-symbols-outlined text-body-md text-outline-variant">unfold_more</span></div></div><nav class="px-space-sm py-space-xs space-y-4" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Main</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">dashboard</span><span class="">Dashboard</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Inventory &amp; Stock</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="products-catalogue" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">inventory_2</span><span class="">Products (Catalogue)</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="batch-inventory-ledger" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">layers</span><span class="">Batch Inventory &amp; Ledger</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="low-stock-alerts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-body-lg text-outline-variant">warning</span><span class="">Low Stock Alerts</span></div><span class="px-1.5 py-0.5 rounded font-caption-sm text-[10px] font-bold bg-error text-on-error">14</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Commerce</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="sales-pos-terminal" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">point_of_sale</span><span class="">Sales &amp; POS Terminal</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="purchases-inward-goods" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">shopping_cart_checkout</span><span class="">Purchases &amp; Inward Goods</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Relations</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="suppliers-ledgers" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">handshake</span><span class="">Suppliers &amp; Ledgers</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Risk &amp; Quality</p><a class="flex items-center justify-between px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="expiry-tracker" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-body-lg text-outline-variant">hourglass_bottom</span><span class="">Expiry Tracker</span></div><span class="px-1.5 py-0.5 rounded font-caption-sm text-[10px] font-bold bg-status-urgent text-on-tertiary">7 FEFO</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="damaged-goods" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">production_quantity_limits</span><span class="">Damaged Goods</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">Insights</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">monitoring</span><span class="">Reports &amp; Analytics</span></a></div><div class="space-y-0.5"><p class="px-space-sm py-1 font-caption-sm text-[10px] font-semibold uppercase tracking-wider text-outline-variant">System</p><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-inverse-on-surface hover:bg-on-background/40 hover:text-surface-bright transition-colors" data-path="store-settings-audit-logs" href="#"><span class="material-symbols-outlined text-body-lg text-outline-variant">settings</span><span class="">Store Settings &amp; Audit Logs</span></a></div></nav></div><div class="p-space-md m-space-sm rounded-xl bg-on-background/30 flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-status-safe"></span><span class="font-caption-sm text-caption-sm text-inverse-on-surface font-medium">POS Online Sync</span></div><span class="font-caption-sm text-[10px] text-outline-variant font-mono">v2.4.1</span></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-card/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md w-96"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-body-md">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-canvas rounded-lg font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Search products, barcode (Ctrl+K)..." type="text"/><div class="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 bg-surface-container rounded font-caption-sm text-[10px] text-on-surface-variant font-medium">Ctrl+K</div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-secondary text-body-md">calendar_today</span></div><div class="flex items-center gap-space-xs"><button class="h-9 px-space-md bg-primary hover:bg-primary-container text-on-primary rounded-lg font-body-sm font-medium flex items-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-body-md">add</span><span class="">New Sale</span></button><button class="h-9 px-space-md bg-surface-card hover:bg-surface-canvas text-on-surface rounded-lg font-body-sm font-medium flex items-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-body-md text-primary">receipt_long</span><span class="">New Purchase</span></button><button class="h-9 px-space-sm bg-surface-card hover:bg-surface-canvas text-on-surface rounded-lg font-body-sm font-medium flex items-center gap-1 transition-colors" title="Barcode Quick Scan" type="button"><span class="material-symbols-outlined text-body-md text-secondary">qr_code_scanner</span><span class="">Quick Scan</span></button></div><div class="relative"><button class="relative p-2 rounded-lg hover:bg-surface-canvas text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-headline-md">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-status-urgent"></span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpG6gO0RYLEy8prypA4SIFL4SQkA55DZssFeicLCcHAhFQQVKbj_PndlypT38onjQADdCY-0DS_NJsWvHC0_Sno0DW0UErTKUnLhyLyGP59uV635xSv7cCT1JNjf9Hxd9ChVluZWrgU0UQmr5Fl5wNXZZuxBgdhl43YcUKzeRFlM9Dh6k5sHndsmW6gzA3u0HfZFl1EBw8tHToIeIae2xJbtNr31zRUWW7nsuzYlPYOPqCppWmteNoA"/><div class="hidden xl:flex flex-col"><span class="font-label-md text-body-sm text-on-surface font-semibold leading-tight">Rajesh Sharma</span><span class="font-caption-sm text-caption-sm text-on-surface-variant">Store Owner</span></div><span class="material-symbols-outlined text-on-surface-variant text-body-md">expand_more</span></div></div></header><main class="relative pt-16 bg-surface-canvas min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg space-y-space-lg">
+<!-- Top Operational Header & Fast Actions Bar -->
+<div class="bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Welcome back, Rajesh!
+          </h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface-variant font-medium">
+<span class="w-2 h-2 rounded-full bg-status-safe animate-pulse"></span>
+            Store Owner • Branch #1 MG Road
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low font-caption-sm text-caption-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-data-table">calendar_today</span>
+            25 Oct 2026
+          </span>
+</div>
+<div class="flex flex-wrap items-center gap-space-md text-on-surface-variant">
+<p class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-data-table">verified_user</span>
+            Day Shift Active
+          </p>
+<span class="text-outline-variant">•</span>
+<p class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-data-table">point_of_sale</span>
+            Cash Drawer #1: <span class="font-data-table text-on-surface font-semibold tabular-nums">₹2,450.00</span>
+</p>
+<span class="text-outline-variant">•</span>
+<p class="font-body-sm text-body-sm text-status-safe flex items-center gap-1">
+<span class="material-symbols-outlined text-data-table">cloud_done</span>
+            Cloud Master Synced (0.2s ago)
+          </p>
+</div>
+</div>
+<!-- Action Shortcut Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs self-stretch xl:self-auto">
+<button class="group flex items-center gap-2 h-10 px-3.5 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-body-sm text-body-sm font-semibold shadow-sm transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-headline-md">receipt_long</span>
+<span>Quick Bill</span>
+<kbd class="px-1.5 py-0.5 rounded bg-on-primary/20 text-on-primary font-caption-sm text-[10px] tracking-wide uppercase">F1</kbd>
+</button>
+<button class="group flex items-center gap-2 h-10 px-3.5 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg font-body-sm text-body-sm font-semibold transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-headline-md">shopping_bag</span>
+<span>New GRN</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption-sm text-[10px] tracking-wide uppercase">F3</kbd>
+</button>
+<button class="group flex items-center gap-2 h-10 px-3.5 bg-surface-container-low hover:bg-surface-container text-secondary rounded-lg font-body-sm text-body-sm font-semibold transition-all active:scale-[0.98]" title="Quick Barcode Scanner Lookup" type="button">
+<span class="material-symbols-outlined text-headline-md">barcode_scanner</span>
+<span>Scan</span>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-caption-sm text-[10px] tracking-wide uppercase">F2</kbd>
+</button>
+<button class="flex items-center gap-1.5 h-10 px-3 bg-surface-card hover:bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-body-lg text-outline">history_edu</span>
+<span>Audit Ledger</span>
+</button>
+<button class="flex items-center gap-1.5 h-10 px-3 bg-surface-card hover:bg-error-container hover:text-on-error-container text-on-surface rounded-lg font-body-sm text-body-sm font-medium transition-colors" title="Generate End-of-Day Terminal Summary" type="button">
+<span class="material-symbols-outlined text-body-lg text-error">assignment_turned_in</span>
+<span>Z-Report</span>
+</button>
+</div>
+</div>
+<!-- Live Executive Snapshot Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption-sm text-caption-sm text-outline uppercase tracking-wider font-semibold">Today's Gross Sales</span>
+<div class="font-metric-display text-metric-display text-on-surface tabular-nums">₹18,450</div>
+<p class="font-caption-sm text-caption-sm text-status-safe flex items-center gap-1">
+<span class="material-symbols-outlined text-data-table">trending_up</span>
+            +14.8% vs last Sunday
+          </p>
+</div>
+<div class="w-11 h-11 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-lg">point_of_sale</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption-sm text-caption-sm text-outline uppercase tracking-wider font-semibold">Total Stock Value</span>
+<div class="font-metric-display text-metric-display text-on-surface tabular-nums">₹4,82,300</div>
+<p class="font-caption-sm text-caption-sm text-outline-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-data-table">inventory_2</span>
+            812 Active Lots in Store
+          </p>
+</div>
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-lg">account_balance_wallet</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption-sm text-caption-sm text-outline uppercase tracking-wider font-semibold">Risk &amp; FEFO Expiry</span>
+<div class="font-metric-display text-metric-display text-status-urgent tabular-nums">7 Items</div>
+<p class="font-caption-sm text-caption-sm text-error flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-data-table">warning</span>
+            3 Items Quarantine Expired
+          </p>
+</div>
+<div class="w-11 h-11 rounded-lg bg-error-container flex items-center justify-center text-crimson-danger">
+<span class="material-symbols-outlined text-headline-lg">hourglass_bottom</span>
+</div>
+</div>
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption-sm text-caption-sm text-outline uppercase tracking-wider font-semibold">Vendor Payables</span>
+<div class="font-metric-display text-metric-display text-tertiary tabular-nums">₹34,500</div>
+<p class="font-caption-sm text-caption-sm text-outline-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-data-table">schedule</span>
+            2 Invoices Due This Week
+          </p>
+</div>
+<div class="w-11 h-11 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-headline-lg">pending_actions</span>
+</div>
+</div>
+</div>
+<!-- Core Module Navigator (Interactive 8-Module Grid) -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md">apps</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+            Master Operations Launchpad
+          </h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface-variant font-medium">
+            8 Functional Engines
+          </span>
+</div>
+<span class="font-caption-sm text-caption-sm text-outline">Click card to launch workspace</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Module 1: Products & Master Catalogue -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#products-catalogue'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">inventory_2</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface font-semibold">
+                Mod 01
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Products &amp; Master Catalogue</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Catalogue, SKUs, Categories &amp; Pricing tiers</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-safe"></span>
+<span class="font-data-table text-data-table text-on-surface font-medium tabular-nums">842 Active SKUs • 18 Categories</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">All Products</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">+ Add SKU</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Category Tree</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Barcode Print</a>
+</div>
+</div>
+<!-- Module 2: Inventory & Batch Ledger -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#batch-inventory-ledger'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">layers</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-expiring/20 text-tertiary-container font-caption-sm text-caption-sm font-bold">
+                9 Low Stock
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Inventory &amp; Batch Ledger</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time stock valuation, lot tracking &amp; counts</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold tabular-nums">Valuation: ₹4,82,300</span>
+<span class="font-caption-sm text-caption-sm text-on-surface-variant tabular-nums">812 Batches</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Movement Ledger</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Stock Audit Count</a>
+<a class="px-2 py-1 rounded bg-error-container text-crimson-danger font-caption-sm text-caption-sm font-semibold transition-colors" href="#" onclick="event.stopPropagation()">Reorder (9)</a>
+</div>
+</div>
+<!-- Module 3: Sales & Billing (POS) -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#sales-pos-terminal'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">point_of_sale</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-caption-sm text-caption-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Terminal Active
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Sales &amp; Billing (POS)</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cashier checkout, UPI/Card counter &amp; invoices</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold tabular-nums">Today: ₹18,450</span>
+<span class="font-caption-sm text-caption-sm text-secondary font-semibold tabular-nums">42 Invoices</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-primary text-on-primary font-caption-sm text-caption-sm font-semibold transition-colors flex items-center gap-1" href="#" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-caption-sm">open_in_new</span>
+              Launch POS
+            </a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Sales Register</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Return / Credit</a>
+</div>
+</div>
+<!-- Module 4: Purchases & Inward Goods (GRN) -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#purchases-inward-goods'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">shopping_cart_checkout</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface font-semibold">
+                1 Unposted Draft
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Purchases &amp; Inward (GRN)</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vendor receipts, batch intake &amp; landed costing</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold tabular-nums">Inward Today: ₹12,600</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">3 Consignments</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">+ Create Inward GRN</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">PO History</a>
+<a class="px-2 py-1 rounded bg-surface-container-highest text-on-surface font-caption-sm text-caption-sm font-semibold transition-colors" href="#" onclick="event.stopPropagation()">Drafts (1)</a>
+</div>
+</div>
+<!-- Module 5: Suppliers & Accounts Payable -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#suppliers-ledgers'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">handshake</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface font-semibold">
+                Mod 05
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Suppliers &amp; Payables</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vendor ledgers, settlement &amp; balance tracking</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-medium">6 Active Vendors</span>
+<span class="font-data-table text-data-table text-tertiary font-bold tabular-nums">₹34,500 Out</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Directory</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Ledger Statement</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Record Payout</a>
+</div>
+</div>
+<!-- Module 6: Expiry & FEFO Stock Control -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#expiry-tracker'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-error-container text-crimson-danger flex items-center justify-center group-hover:bg-crimson-danger group-hover:text-on-error transition-colors">
+<span class="material-symbols-outlined text-headline-lg">hourglass_bottom</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-urgent text-on-tertiary font-caption-sm text-caption-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-caption-sm">priority_high</span>
+                7 FEFO Priority
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Expiry &amp; FEFO Control</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shelf-life, FEFO POS lockdown &amp; clearance</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-caption-sm text-caption-sm text-status-expiring font-semibold">14 Expiring Soon</span>
+<span class="font-caption-sm text-caption-sm text-crimson-danger font-bold">3 Expired (Blocked)</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Expiry Tracker</a>
+<a class="px-2 py-1 rounded bg-status-expiring/20 text-tertiary-container font-caption-sm text-caption-sm font-semibold transition-colors" href="#" onclick="event.stopPropagation()">Apply 30% Promo</a>
+<a class="px-2 py-1 rounded bg-error-container text-crimson-danger font-caption-sm text-caption-sm font-semibold transition-colors" href="#" onclick="event.stopPropagation()">Quarantine</a>
+</div>
+</div>
+<!-- Module 7: Damaged Goods & Claims -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#damaged-goods'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">production_quantity_limits</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-caption-sm text-caption-sm text-on-surface font-semibold">
+                2 Pending Claims
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Damaged Goods &amp; Claims</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Breakage logging, salvage &amp; vendor claims</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-crimson-danger font-semibold tabular-nums">₹850 Reported Loss</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">Oct Cycle</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Log Damage</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Replacement Track</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Disposal Log</a>
+</div>
+</div>
+<!-- Module 8: Reports, Gross Margin & Analytics -->
+<div class="group relative bg-surface-card hover:bg-surface-bright rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-hidden cursor-pointer" onclick="window.location.hash='#reports-analytics'">
+<div class="space-y-space-md">
+<div class="flex items-start justify-between">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-headline-lg">monitoring</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-caption-sm text-caption-sm font-bold">
+                28.4% Margin
+              </span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold group-hover:text-primary transition-colors flex items-center justify-between">
+<span>Reports, Margin &amp; Tax</span>
+<span class="material-symbols-outlined text-body-md opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">P&amp;L estimates, velocity, GST &amp; tax compliance</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-data-table text-data-table text-secondary font-bold tabular-nums">7D Margin: ₹26,450</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">GSTR-1 Ready</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-sm bg-surface-card group-hover:bg-surface-bright flex flex-wrap gap-1.5">
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Velocity Report</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">GST Breakdown</a>
+<a class="px-2 py-1 rounded bg-surface-container hover:bg-primary-fixed hover:text-on-primary-fixed font-caption-sm text-caption-sm text-on-surface-variant transition-colors" href="#" onclick="event.stopPropagation()">Export CSV</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Live System Vitals & Priority Dispatch Deck (Tri-Column Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Column 1: Priority Tasks & Operational Blockers (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-urgent text-headline-md">flag</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Priority Dispatch</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-crimson-danger font-caption-sm text-caption-sm font-bold">3 Action Items</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tasks requiring supervisor sign-off before shift reconciliation.</p>
+<div class="space-y-2.5">
+<!-- Urgent Task 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3">
+<span class="material-symbols-outlined text-crimson-danger text-body-lg mt-0.5">block</span>
+<div class="min-w-0 flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-data-table text-data-table text-on-surface font-semibold truncate">3 Expired SKUs Blocked</p>
+<span class="font-caption-sm text-[10px] uppercase font-bold text-crimson-danger bg-error-container px-1.5 py-0.2 rounded">Urgent</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant">Amul Butter (Batch #B802) &amp; Bread loafs halted at POS checkout.</p>
+<div class="pt-1 flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-crimson-danger text-on-error font-caption-sm text-caption-sm font-medium" type="button">Quarantine Stock</button>
+<button class="px-2 py-0.5 rounded bg-surface-card hover:bg-surface-bright text-on-surface font-caption-sm text-caption-sm" type="button">Inspect</button>
+</div>
+</div>
+</div>
+<!-- Urgent Task 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-body-lg mt-0.5">receipt</span>
+<div class="min-w-0 flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-data-table text-data-table text-on-surface font-semibold truncate">Invoice INV-99420 Approval</p>
+<span class="font-caption-sm text-[10px] uppercase font-bold text-tertiary bg-tertiary-fixed px-1.5 py-0.2 rounded">Payment</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant">Metro Cash &amp; Carry • ₹14,200 consignment pending release.</p>
+<div class="pt-1 flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-caption-sm text-caption-sm font-medium" type="button">Approve Payout</button>
+<button class="px-2 py-0.5 rounded bg-surface-card hover:bg-surface-bright text-on-surface font-caption-sm text-caption-sm" type="button">View GRN</button>
+</div>
+</div>
+</div>
+<!-- Urgent Task 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3">
+<span class="material-symbols-outlined text-status-expiring text-body-lg mt-0.5">low_priority</span>
+<div class="min-w-0 flex-1 space-y-1">
+<div class="flex items-center justify-between">
+<p class="font-data-table text-data-table text-on-surface font-semibold truncate">9 Items Below Reorder Point</p>
+<span class="font-caption-sm text-[10px] uppercase font-bold text-on-surface-variant bg-surface-container px-1.5 py-0.2 rounded">Stock</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant">Fortune Sunflower Oil, Tata Salt 1kg, Aashirvaad Atta 5kg.</p>
+<div class="pt-1 flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-surface-card hover:bg-surface-bright text-on-surface font-caption-sm text-caption-sm font-semibold" type="button">Auto-Draft PO</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-card flex items-center justify-between">
+<span class="font-caption-sm text-caption-sm text-outline">Shift Manager Checkpoint</span>
+<button class="text-primary hover:text-primary-container font-caption-sm text-caption-sm font-bold flex items-center gap-0.5" type="button">
+            Audit All Tasks
+            <span class="material-symbols-outlined text-caption-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Column 2: Live Activity & Cross-Module Audit Trail (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md">stream</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Cross-Module Activity Trail</h3>
+</div>
+<span class="inline-flex items-center gap-1 text-status-safe font-caption-sm text-caption-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-safe animate-pulse"></span>
+              Live Feed
+            </span>
+</div>
+<div class="space-y-3">
+<!-- Event 1: POS -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-body-md">point_of_sale</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold">Sale #POS-8821 Settled</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">2m ago</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant truncate">
+                  ₹840.00 • Cash • 6 items • Cashier Sunita R.
+                </p>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-caption-sm text-[10px] font-semibold">MODULE: POS</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-caption-sm text-[10px] font-semibold">PAID</span>
+</div>
+</div>
+</div>
+<!-- Event 2: GRN -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-body-md">local_shipping</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold">GRN Inward #GRN-1049 Logged</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">18m ago</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant truncate">
+                  Nestle India Dist. • 40 units Maggi • ₹4,200 inward
+                </p>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-caption-sm text-[10px] font-semibold">MODULE: GRN</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-primary font-caption-sm text-[10px] font-semibold">POSTED</span>
+</div>
+</div>
+</div>
+<!-- Event 3: FEFO Clearance -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-lg bg-error-container text-crimson-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-body-md">high_res</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold">FEFO 30% Promo Activated</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">42m ago</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant truncate">
+                  8 Milk Tetrapacks expiring in 4 days moved to clearance shelf.
+                </p>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-caption-sm text-[10px] font-semibold">MODULE: FEFO</span>
+<span class="px-1.5 py-0.2 rounded bg-status-expiring/20 text-tertiary-container font-caption-sm text-[10px] font-semibold">PROMO</span>
+</div>
+</div>
+</div>
+<!-- Event 4: Ledger Audit -->
+<div class="flex items-start gap-3 p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-body-md">sync_alt</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-data-table text-data-table text-on-surface font-semibold">Stock Rebalance Count</span>
+<span class="font-caption-sm text-caption-sm text-outline tabular-nums">1h 10m ago</span>
+</div>
+<p class="font-body-sm text-caption-sm text-on-surface-variant truncate">
+                  Aisle 4 Spices audited • 0 variance detected across 24 SKUs.
+                </p>
+<div class="mt-1 flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-caption-sm text-[10px] font-semibold">MODULE: LEDGER</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-caption-sm text-[10px] font-semibold">VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-card flex items-center justify-between">
+<span class="font-caption-sm text-caption-sm text-outline">Showing last 4 cross-module logs</span>
+<button class="text-primary hover:text-primary-container font-caption-sm text-caption-sm font-bold flex items-center gap-0.5" type="button">
+            Full Audit Stream
+            <span class="material-symbols-outlined text-caption-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Column 3: Store Health, Hardware & Engine Telemetry (3 Cols) -->
+<div class="lg:col-span-3 bg-surface-card rounded-xl shadow-sm p-space-lg flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-md">tune</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Store Telemetry</h3>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-status-safe"></span>
+</div>
+<div class="space-y-3">
+<div class="p-3 rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-body-md">database</span>
+                  PostgreSQL ACID Sync
+                </span>
+<span class="font-caption-sm text-caption-sm font-bold text-status-safe">100% OK</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-status-safe rounded-full" style="width: 100%"></div>
+</div>
+<p class="font-caption-sm text-[10px] text-outline">All transactional journals locked &amp; committed.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-body-md">wifi_off</span>
+                  Offline POS Cache
+                </span>
+<span class="font-caption-sm text-caption-sm font-bold text-secondary">Ready (842 SKUs)</span>
+</div>
+<p class="font-caption-sm text-[10px] text-outline">Cashier can bill up to 24 hours without internet.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low space-y-2">
+<span class="font-caption-sm text-caption-sm text-outline uppercase tracking-wider font-semibold">Peripherals Status</span>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between font-body-sm text-caption-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-data-table text-outline">point_of_sale</span>
+                    Active Registers
+                  </span>
+<span class="text-status-safe font-semibold">1 / 1 Online</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-caption-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-data-table text-outline">barcode_scanner</span>
+                    Honeywell Scanner
+                  </span>
+<span class="text-status-safe font-semibold">Connected (USB)</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-caption-sm">
+<span class="text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-data-table text-outline">print</span>
+                    TVS Thermal 80mm
+                  </span>
+<span class="text-status-safe font-semibold">Ready (Paper OK)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-card flex items-center justify-between">
+<span class="font-caption-sm text-[10px] text-outline font-mono">Engine: ShopIQ Core v2.4.1</span>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-caption-sm text-caption-sm font-semibold transition-colors" type="button">
+            Run Diagnostics
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+</body></html>
