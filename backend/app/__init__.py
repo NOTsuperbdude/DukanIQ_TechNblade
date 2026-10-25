@@ -6,7 +6,9 @@ Covers: Authentication, Products, Inventory, Purchases, Sales,
         Suppliers, Expiry, Damaged Goods, Reports, and Audit Logs.
 """
 
+# pyrefly: ignore[missing-import]
 from fastapi import FastAPI
+# pyrefly: ignore[missing-import]
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import engine, Base
@@ -56,8 +58,33 @@ app.add_middleware(
 app.include_router(api_router, prefix="/api/v1")
 
 
+from pathlib import Path
+from fastapi import Request
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+# UI Directory for frontend dashboard
+UI_DIR = Path(__file__).resolve().parent.parent.parent / "ui_recreation"
+if UI_DIR.exists():
+    app.mount("/static", StaticFiles(directory=str(UI_DIR)), name="static")
+
+    @app.get("/app", tags=["Frontend"], include_in_schema=False)
+    @app.get("/dashboard", tags=["Frontend"], include_in_schema=False)
+    def serve_dashboard():
+        index_file = UI_DIR / "index.html"
+        if index_file.exists():
+            return FileResponse(index_file)
+        return FileResponse(UI_DIR / "code.html")
+
+
 @app.get("/", tags=["Health"])
-def root():
+def root(request: Request):
+    accept_header = request.headers.get("accept", "")
+    if "text/html" in accept_header and UI_DIR.exists():
+        index_file = UI_DIR / "index.html"
+        if index_file.exists():
+            return FileResponse(index_file)
+        return FileResponse(UI_DIR / "code.html")
     return {
         "app": settings.APP_NAME,
         "version": "1.0.0",
@@ -69,3 +96,4 @@ def root():
 @app.get("/health", tags=["Health"])
 def health_check():
     return {"status": "healthy", "database": "connected"}
+
