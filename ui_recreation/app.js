@@ -3,7 +3,9 @@
  * Full interactive client connected to FastAPI backend at http://localhost:8000/api/v1
  */
 
-const API_BASE = 'http://localhost:8000/api/v1';
+const API_BASE = (typeof window !== 'undefined' && window.location && window.location.origin && window.location.origin.startsWith('http')) 
+  ? `${window.location.origin}/api/v1` 
+  : 'http://localhost:8000/api/v1';
 
 // App State
 const state = {

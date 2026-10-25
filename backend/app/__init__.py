@@ -68,6 +68,14 @@ UI_DIR = Path(__file__).resolve().parent.parent.parent / "ui_recreation"
 if UI_DIR.exists():
     app.mount("/static", StaticFiles(directory=str(UI_DIR)), name="static")
 
+    @app.get("/app.js", include_in_schema=False)
+    def serve_app_js():
+        return FileResponse(UI_DIR / "app.js", media_type="application/javascript")
+
+    @app.get("/screen.png", include_in_schema=False)
+    def serve_screen_png():
+        return FileResponse(UI_DIR / "screen.png", media_type="image/png")
+
     @app.get("/app", tags=["Frontend"], include_in_schema=False)
     @app.get("/dashboard", tags=["Frontend"], include_in_schema=False)
     def serve_dashboard():
@@ -77,14 +85,14 @@ if UI_DIR.exists():
         return FileResponse(UI_DIR / "code.html")
 
 
-@app.get("/", tags=["Health"])
-def root(request: Request):
-    accept_header = request.headers.get("accept", "")
-    if "text/html" in accept_header and UI_DIR.exists():
+@app.get("/", tags=["Frontend", "Health"])
+def root():
+    if UI_DIR.exists():
         index_file = UI_DIR / "index.html"
         if index_file.exists():
             return FileResponse(index_file)
-        return FileResponse(UI_DIR / "code.html")
+        if (UI_DIR / "code.html").exists():
+            return FileResponse(UI_DIR / "code.html")
     return {
         "app": settings.APP_NAME,
         "version": "1.0.0",
