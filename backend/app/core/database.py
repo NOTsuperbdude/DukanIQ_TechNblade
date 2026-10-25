@@ -1,5 +1,8 @@
+# pyrefly: ignore[missing-import]
 from sqlalchemy import create_engine
+# pyrefly: ignore[missing-import]
 from sqlalchemy.ext.declarative import declarative_base
+# pyrefly: ignore[missing-import]
 from sqlalchemy.orm import sessionmaker
 from app.core.config import settings
 
